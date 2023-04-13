@@ -11,6 +11,6 @@ namespace Ventas_Creasistemas.Models
         public int Precio { get; set; }
         public int CodigoBarras { get; set; }
 
-        public virtual Ventas? IdProductoNavigation { get; set; }
+        public virtual Ventas IdProductoNavigation { get; set; }
     }
 }

@@ -17,9 +17,9 @@ namespace Ventas_Creasistemas.Controllers
     {
 		private readonly ProductService _productService;
 
-		public ProductController(ProductService productService)
+		public ProductController()
 		{
-            _productService = productService;
+            _productService = new ProductService();
         }
 
         [HttpGet]

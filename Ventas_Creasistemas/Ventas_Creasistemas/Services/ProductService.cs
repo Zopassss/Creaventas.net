@@ -12,9 +12,9 @@ namespace Ventas_Creasistemas.Services
 	{
 		private readonly ProductRepository _productRepository;
 
-		public ProductService(ProductRepository productRepository)
+		public ProductService()
 		{
-			_productRepository = productRepository;
+			_productRepository = new ProductRepository();
         }
 
         public List<ProductDto> GetProducts()
@@ -36,7 +36,7 @@ namespace Ventas_Creasistemas.Services
         }
 
 
-        public int EditProduct(ProductDto productDto)
+        public int UpdateProduct(ProductDto productDto)
         {
             var product = MapToModel(productDto);
             return _productRepository.update(product);
